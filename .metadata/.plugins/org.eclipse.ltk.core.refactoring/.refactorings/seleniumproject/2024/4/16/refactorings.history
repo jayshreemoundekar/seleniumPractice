@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Day28.Assignment&apos; to &apos;Assignment1&apos;&#x0D;&#x0A;- Original project: &apos;seleniumproject&apos;&#x0D;&#x0A;- Original element: &apos;Day28.Assignment&apos;&#x0D;&#x0A;- Renamed element: &apos;Day28.Assignment1&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Assignment&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;Day28{Assignment.java[Assignment" matchStrategy="1" name="Assignment1" qualified="false" references="true" similarDeclarations="false" stamp="1713532408089" textual="false" version="1.0"/>
+</session>

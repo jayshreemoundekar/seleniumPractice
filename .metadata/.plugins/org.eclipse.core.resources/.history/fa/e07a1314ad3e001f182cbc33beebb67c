@@ -1,0 +1,21 @@
+package stepDefination;
+
+import io.cucumber.java.After;
+import utils.TestContextSetUp;
+
+public class Hooks {
+	TestContextSetUp testContextSetu;
+	
+	public Hooks(TestContextSetUp testContextSetu)
+	{
+		this.testContextSetu=testContextSetu;
+	}
+
+	@After
+	public void AfterScenario()
+	{
+		testContextSetu.testBase.WebDriverManager().quit();
+		
+	}
+
+}

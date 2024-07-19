@@ -1,0 +1,38 @@
+package utils;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+
+public class TestBase {
+	public WebDriver driver;
+	public WebDriver WebDriverManager() throws IOException
+	{
+		FileInputStream fis= new FileInputStream(System.getProperty("user.dir")+"\\\\src\\\\test\\\\resouces\\\\global.properties");
+		Properties prop= new Properties();
+		prop.load(fis);
+		String url=prop.getProperty("QAurl");
+		if(driver==null)
+			
+		{
+			if(prop.getProperty("browser").equalsIgnoreCase("chrome"))
+			{
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\JAYSHREE\\Downloads\\chromedriver-win32\\chromedriver-win32.exe");
+			}
+			if(prop.getProperty("browser")=="firefox")
+			{
+				//System.setProperty("webdriver.chrome.driver", "C:\\Users\\JAYSHREE\\Downloads\\chromedriver-win32\\chromedriver-win32.exe");
+				//firefox code
+			}
+		
+		driver.get(url);
+		
+		
+		
+		}
+		return driver;
+	}
+
+}

@@ -1,0 +1,45 @@
+package stepDefination;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+import io.cucumber.java.en.Then;
+import pageObject.CheckoutPage;
+import utils.TestContextSetUp;
+
+public class CheckOutPageStepDefination {
+	public WebDriver driver;
+	public String offerPage;
+	public String landingpageproductName;
+	public  CheckoutPage checkOutPage;
+	
+	TestContextSetUp testContextSetu;
+
+	public CheckOutPageStepDefination(TestContextSetUp testContextSetu) {
+		this.testContextSetu = testContextSetu;
+		this.checkOutPage = testContextSetu.pageObjectManager.getCheckoutPage();
+	}
+
+	
+	@Then ("User has ability to enter promo code and place the order")
+	public void User_has_ability_to_enter_promo_code_and_place_the_order()
+	{
+		
+		
+		
+		Assert.assertTrue(checkOutPage.VerifyPromoBtn());		
+		Assert.assertTrue(checkOutPage.VerifyplaceOrder());
+		
+	}
+	
+	@Then ("^User proceeds to checkout and validate the <Name> items in checkout page$")
+	public void User_proceeds_to_checkout(String name) throws InterruptedException
+	{
+		
+		checkOutPage.checkoutItems();
+		
+		
+	}
+	
+
+}
